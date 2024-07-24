@@ -1,0 +1,119 @@
+.item {
+    width: 280px;
+    height: 380px; /* Keep fixed height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: -80px;
+}
+
+.item img {
+    width: 280px;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Ensure the image doesn't exceed a certain height */
+    object-fit: cover; /* Ensure the image fits within the container */
+    /* Reduce gap between image and name */
+}
+
+.item p {
+    margin: 4px 0px; /* Reduce margin for a tighter layout */
+    text-align: center;
+     /* Center the text */
+}
+
+.item-prices {
+    display: flex;
+    gap: 10px; /* Reduce gap between new and old price */
+    justify-content: center; /* Center the prices */
+    margin-bottom: 60px; /* Reduce space above the prices */
+}
+
+.item-price-new {
+    color: #374151;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item-price-old {
+    color: #8c8c8c;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+
+@media(max-width: 1280px) {
+    .item {
+        width: 220px;
+        height: 330px; /* Adjust height for smaller screens */
+        font-size: 14px;
+    }
+    .item img {
+        width: 220px;
+        max-height: 160px; /* Adjust max-height */
+        margin-bottom: 8px; /* Reduce gap between image and name */
+    }
+    .item p {
+        margin: 3px 0px; /* Reduce margin for smaller screens */
+    }
+    .item-prices {
+        gap: 8px; /* Reduce gap between new and old price */
+        margin-top: 3px; /* Reduce space above the prices */
+    }
+    .item-price-old {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .item {
+        width: 170px;
+        height: 280px; /* Adjust height for smaller screens */
+        font-size: 13px;
+    }
+    .item img {
+        width: 170px;
+        max-height: 120px; /* Adjust max-height */
+        margin-bottom: 6px; /* Reduce gap between image and name */
+    }
+    .item p {
+        margin: 2px 0px; /* Reduce margin for smaller screens */
+    }
+    .item-prices {
+        gap: 6px; /* Reduce gap between new and old price */
+        margin-top: 2px; /* Reduce space above the prices */
+    }
+    .item-price-old {
+        font-size: 13px;
+    }
+}
+
+@media(max-width: 800px) {
+    .item {
+        width: 160px; /* Ensure consistent width */
+        height: 240px; /* Adjust height for smaller screens */
+        font-size: 12px;
+    }
+    .item img {
+        width: 160px;
+        max-height: 100px; /* Adjust max-height */
+        margin-bottom: 4px; /* Reduce gap between image and name */
+    }
+    .item p {
+        margin: 1px 0px; /* Reduce margin for smaller screens */
+    }
+    .item-prices {
+        gap: 4px; /* Reduce gap between new and old price */
+        margin-top: 1px; /* Reduce space above the prices */
+    }
+    .item-price-old {
+        font-size: 12px;
+    }
+}
